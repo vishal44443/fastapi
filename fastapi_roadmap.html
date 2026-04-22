@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>FastAPI Roadmap</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#0f0f0f;color:#e2e8f0;padding:1.2rem}
+h1{font-size:15px;font-weight:600;color:#f8fafc;margin-bottom:1rem}
+
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1rem;padding:10px 14px;background:#1e1e1e;border-radius:8px;border:1px solid #2a2a2a}
+.leg{display:flex;align-items:center;gap:5px;font-size:11px;color:#94a3b8}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.d1{background:#16a34a}.d2{background:#f97316}.d3{background:#ef4444}.d4{background:#64748b}
+.sep{width:1px;background:#2a2a2a;margin:0 4px}
+
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1rem}
+.tab{font-size:12px;font-weight:500;padding:5px 14px;border-radius:20px;border:1.5px solid #2a2a2a;background:#1e1e1e;color:#94a3b8;cursor:pointer;transition:.15s}
+.tab:hover{border-color:#4a4a4a;color:#cbd5e1}
+.tab.active{border-color:#e2e8f0;color:#f8fafc;background:#2a2a2a}
+
+.page{display:none}.page.active{display:block}
+
+.tbl-wrap{border:1px solid #2a2a2a;border-radius:10px;overflow:hidden;width:100%}
+.tbl-title{font-size:13px;font-weight:600;padding:9px 14px;border-bottom:1px solid #2a2a2a;background:#181818;color:#f1f5f9}
+.tbl-head{display:grid;grid-template-columns:2.2fr 82px 100px;background:#181818;padding:7px 12px;border-bottom:1px solid #2a2a2a;gap:6px}
+.tbl-head span{font-size:10px;font-weight:500;color:#64748b;text-transform:uppercase;letter-spacing:.07em}
+.row{display:grid;grid-template-columns:2.2fr 82px 100px;padding:6px 12px;border-bottom:1px solid #1e1e1e;align-items:center;gap:6px}
+.row:last-child{border-bottom:none}
+.row:hover{background:#1a1a1a}
+.topic{font-size:12px;line-height:1.4;color:#cbd5e1}
+
+.imp{display:flex;align-items:center;gap:4px}
+.badge{font-size:10px;font-weight:500;padding:2px 7px;border-radius:10px;white-space:nowrap}
+.b1{background:#14532d;color:#86efac}
+.b2{background:#431407;color:#fed7aa}
+.b3{background:#450a0a;color:#fca5a5}
+.b4{background:#1e293b;color:#94a3b8}
+
+.lv{font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;display:inline-block;letter-spacing:.02em}
+.lv-j{background:#0c2d4a;color:#7dd3fc}
+.lv-a{background:#1e1033;color:#c4b5fd}
+.lv-m{background:#2d1f00;color:#fde047}
+.lv-s{background:#14532d;color:#86efac}
+.lv-st{background:#2d0a1a;color:#f9a8d4}
+.lv-sk{background:#1e1e1e;color:#475569;text-decoration:line-through}
+</style>
+</head>
+<body>
+<h1>FastAPI Learning Roadmap — AI Engineer Path</h1>
+
+<div class="legend">
+  <div class="leg"><div class="dot d1"></div> Must learn</div>
+  <div class="leg"><div class="dot d2"></div> Learn later</div>
+  <div class="leg"><div class="dot d3"></div> Skip (AI path)</div>
+  <div class="leg"><div class="dot d4"></div> Optional</div>
+  <div class="sep"></div>
+  <div class="leg"><span class="lv lv-j">Junior</span></div>
+  <div class="leg"><span class="lv lv-a">Associate</span></div>
+  <div class="leg"><span class="lv lv-m">Mid</span></div>
+  <div class="leg"><span class="lv lv-s">Senior</span></div>
+  <div class="leg"><span class="lv lv-st">Staff</span></div>
+  <div class="leg"><span class="lv lv-sk">Skip</span></div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="show('tutorial',this)">Tutorial</div>
+  <div class="tab" onclick="show('advanced',this)">Advanced</div>
+  <div class="tab" onclick="show('deployment',this)">Deployment</div>
+  <div class="tab" onclick="show('recipes',this)">How-To Recipes</div>
+</div>
+
+<!-- TUTORIAL -->
+<div class="page active" id="p-tutorial">
+<div class="tbl-wrap">
+  <div class="tbl-title">Tutorial – User Guide</div>
+  <div class="tbl-head"><span>Topic</span><span>Priority</span><span>Level</span></div>
+  <div class="row"><span class="topic">First Steps</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Path Parameters</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Query Parameters</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Request Body</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Query Parameters and String Validations</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Path Parameters and Numeric Validations</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Query Parameter Models</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Body – Multiple Parameters</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Body – Fields</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Body – Nested Models</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Declare Request Example Data</span><div class="imp"><div class="dot d4"></div><span class="badge b4">Optional</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Extra Data Types</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Cookie Parameters</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Header Parameters</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Cookie Parameter Models</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Header Parameter Models</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Response Model – Return Type</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Extra Models</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Response Status Code</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Form Data</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Form Models</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Request Files</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Request Forms and Files</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Handling Errors</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">Path Operation Configuration</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">JSON Compatible Encoder</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Body – Updates</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Dependencies</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Security</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Middleware</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">CORS (Cross-Origin Resource Sharing)</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">SQL (Relational) Databases</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Bigger Applications – Multiple Files</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Stream JSON Lines</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Server-Sent Events (SSE)</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Background Tasks</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Metadata and Docs URLs</span><div class="imp"><div class="dot d4"></div><span class="badge b4">Optional</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Static Files</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Testing</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Debugging</span><div class="imp"><div class="dot d4"></div><span class="badge b4">Optional</span></div><span class="lv lv-j">Junior</span></div>
+</div>
+</div>
+
+<!-- ADVANCED -->
+<div class="page" id="p-advanced">
+<div class="tbl-wrap">
+  <div class="tbl-title">Advanced User Guide</div>
+  <div class="tbl-head"><span>Topic</span><span>Priority</span><span>Level</span></div>
+  <div class="row"><span class="topic">Stream Data</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Path Operation Advanced Configuration</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Additional Status Codes</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Return a Response Directly</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Custom Response – HTML, Stream, File, others</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Additional Responses in OpenAPI</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Response Cookies</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Response Headers</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Response – Change Status Code</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Advanced Dependencies</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Advanced Security</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Using the Request Directly</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Using Dataclasses</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Advanced Middleware</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Sub Applications – Mounts</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Behind a Proxy</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Templates</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">WebSockets</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Lifespan Events</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Testing WebSockets</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Testing Events: lifespan and startup – shutdown</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Testing Dependencies with Overrides</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Async Tests</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Settings and Environment Variables</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">OpenAPI Callbacks</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">OpenAPI Webhooks</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Including WSGI – Flask, Django, others</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Generating SDKs</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Advanced Python Types</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">JSON with Bytes as Base64</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Strict Content-Type Checking</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Vibe Coding</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+</div>
+</div>
+
+<!-- DEPLOYMENT -->
+<div class="page" id="p-deployment">
+<div class="tbl-wrap">
+  <div class="tbl-title">Deployment</div>
+  <div class="tbl-head"><span>Topic</span><span>Priority</span><span>Level</span></div>
+  <div class="row"><span class="topic">About FastAPI versions</span><div class="imp"><div class="dot d4"></div><span class="badge b4">Optional</span></div><span class="lv lv-j">Junior</span></div>
+  <div class="row"><span class="topic">FastAPI Cloud</span><div class="imp"><div class="dot d4"></div><span class="badge b4">Optional</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">About HTTPS</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Run a Server Manually</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-a">Associate</span></div>
+  <div class="row"><span class="topic">Deployments Concepts</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Deploy FastAPI on Cloud Providers</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Server Workers – Uvicorn with Workers</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">FastAPI in Containers – Docker</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+</div>
+</div>
+
+<!-- RECIPES -->
+<div class="page" id="p-recipes">
+<div class="tbl-wrap">
+  <div class="tbl-title">How To – Recipes</div>
+  <div class="tbl-head"><span>Topic</span><span>Priority</span><span>Level</span></div>
+  <div class="row"><span class="topic">General – How To – Recipes</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">Migrate from Pydantic v1 to Pydantic v2</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-m">Mid</span></div>
+  <div class="row"><span class="topic">GraphQL</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+  <div class="row"><span class="topic">Custom Request and APIRoute class</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-st">Staff</span></div>
+  <div class="row"><span class="topic">Conditional OpenAPI</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Extending OpenAPI</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Separate OpenAPI Schemas for Input and Output or Not</span><div class="imp"><div class="dot d2"></div><span class="badge b2">Later</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Custom Docs UI Static Assets (Self-Hosting)</span><div class="imp"><div class="dot d4"></div><span class="badge b4">Optional</span></div><span class="lv lv-st">Staff</span></div>
+  <div class="row"><span class="topic">Configure Swagger UI</span><div class="imp"><div class="dot d4"></div><span class="badge b4">Optional</span></div><span class="lv lv-st">Staff</span></div>
+  <div class="row"><span class="topic">Testing a Database</span><div class="imp"><div class="dot d1"></div><span class="badge b1">Must</span></div><span class="lv lv-s">Senior</span></div>
+  <div class="row"><span class="topic">Use Old 403 Authentication Error Status Codes</span><div class="imp"><div class="dot d3"></div><span class="badge b3">Skip</span></div><span class="lv lv-sk">Skip</span></div>
+</div>
+</div>
+
+<script>
+function show(id,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('p-'+id).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>
